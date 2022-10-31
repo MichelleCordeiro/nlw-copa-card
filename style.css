@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Roboto';
+}
+
+body {
+  background: linear-gradient(150deg, #0f2b05, #000000);
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  padding: 75px 0;
+}
+
+.card {
+  display: inline-block;
+  width: 354px;
+  height: 508px;
+  background-image: url(./assets/bg-explorer.svg);
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: appear 0.4s forwards;
+
+  /* Não mostrará a tag card selecionada c o click */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card > img {
+  width: 150px;
+  height: 150px;
+  margin-top: 115px;
+  object-fit: cover;
+  border: solid 4px #f7dd43;
+  border-radius: 50%;
+  /* O curso não picará piscando e nem
+  mostrará a tag card selecionada c o click */
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.info {
+  text-align: left;
+  color: white;
+  margin-left: 70px;
+  margin-top: 100px;
+}
+
+.info h1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 160%;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
